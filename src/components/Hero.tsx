@@ -58,21 +58,37 @@ export const Hero: React.FC = () => {
               </div>
             )}
 
-            {/* Main Greeting & Name */}
-            <div className="space-y-2">
-              <p className="text-base sm:text-lg font-semibold tracking-wide text-blue-600 dark:text-blue-400 uppercase">
-                Xin chào, tôi là
-              </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                {personalInfo.name}
-              </h1>
-              
-              {/* Animated Role Text */}
-              <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start gap-2">
-                <span className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-300 bg-clip-text text-transparent">
-                  {displayText}
+            {/* Avatar & Main Greeting & Name */}
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-5">
+              <div className="relative group shrink-0">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden ring-4 ring-blue-500/20 dark:ring-blue-400/20 shadow-xl shadow-blue-500/10 bg-slate-100 dark:bg-slate-800">
+                  <img
+                    src={personalInfo.avatar}
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <span className="absolute -bottom-1 -right-1 flex h-4 w-4">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white dark:border-slate-900"></span>
                 </span>
-                <span className="w-0.5 h-6 sm:h-8 bg-blue-600 dark:bg-blue-400 animate-pulse" />
+              </div>
+
+              <div className="space-y-2 text-center sm:text-left">
+                <p className="text-base sm:text-lg font-semibold tracking-wide text-blue-600 dark:text-blue-400 uppercase">
+                  Xin chào, tôi là
+                </p>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                  {personalInfo.name}
+                </h1>
+                
+                {/* Animated Role Text */}
+                <div className="h-10 sm:h-12 flex items-center justify-center sm:justify-start gap-2">
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-300 bg-clip-text text-transparent">
+                    {displayText}
+                  </span>
+                  <span className="w-0.5 h-6 sm:h-8 bg-blue-600 dark:bg-blue-400 animate-pulse" />
+                </div>
               </div>
             </div>
 

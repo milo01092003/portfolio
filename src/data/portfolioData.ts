@@ -38,6 +38,7 @@ export const portfolioData = {
   personalInfo: {
     name: "Trịnh Minh Đức",
     shortName: "Trịnh Đức",
+    avatar: "/avatar.jpg",
     tagline: "Business Analyst • Quản Trị Web • Software Engineer",
     typewriterRoles: [
       "Business Analyst",

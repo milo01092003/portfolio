@@ -85,9 +85,21 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             
             <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                Thông tin trực tiếp
-              </h3>
+              <div className="flex items-center gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="w-14 h-14 rounded-xl object-cover object-top ring-2 ring-blue-500/30 shadow-sm shrink-0"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                    Thông tin trực tiếp
+                  </h3>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                    {personalInfo.name}
+                  </p>
+                </div>
+              </div>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Tôi luôn sẵn sàng tiếp nhận các cơ hội công việc mới, hợp tác phát triển phần mềm hoặc các buổi trao đổi kỹ thuật.
               </p>

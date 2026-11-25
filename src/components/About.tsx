@@ -3,7 +3,7 @@ import { portfolioData } from '../data/portfolioData';
 import { Code2, Zap, Layout, Users, GraduationCap, Award, Compass } from 'lucide-react';
 
 export const About: React.FC = () => {
-  const { about, education } = portfolioData;
+  const { about, education, personalInfo } = portfolioData;
 
   const strengthIcons = [
     <Code2 className="w-6 h-6 text-blue-500" />,
@@ -35,11 +35,26 @@ export const About: React.FC = () => {
           
           {/* Left Narrative */}
           <div className="lg:col-span-6 space-y-5">
-            <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <span className="w-2 h-6 rounded-full bg-blue-600"></span>
-                <span>Đam mê tạo ra sản phẩm thực thụ</span>
-              </h3>
+            <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+                <img 
+                  src={personalInfo.avatar} 
+                  alt={personalInfo.name} 
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top ring-4 ring-blue-500/20 shadow-md shrink-0" 
+                />
+                <div className="text-center sm:text-left">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center justify-center sm:justify-start gap-2">
+                    <span className="w-2 h-6 rounded-full bg-blue-600 hidden sm:inline-block"></span>
+                    <span>Đam mê tạo ra sản phẩm thực thụ</span>
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                    {personalInfo.name}
+                  </p>
+                  <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
+                    Business Analyst & Quản Trị Web @ Trường Thành Media
+                  </p>
+                </div>
+              </div>
               
               {about.paragraphs.map((p, idx) => (
                 <p key={idx} className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">

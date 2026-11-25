@@ -6,7 +6,6 @@ import {
   Moon, 
   Menu, 
   X, 
-  Terminal, 
   ArrowUpRight, 
   Phone, 
   Mail, 
@@ -75,10 +74,14 @@ export const Navbar: React.FC = () => {
             {/* Logo */}
             <a
               href="#"
-              className="flex items-center gap-2 group text-xl font-bold tracking-tight text-slate-900 dark:text-white"
+              className="flex items-center gap-2.5 group text-xl font-bold tracking-tight text-slate-900 dark:text-white"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200">
-                <Terminal className="w-5 h-5" />
+              <div className="w-9 h-9 rounded-xl overflow-hidden ring-2 ring-blue-500/30 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200">
+                <img
+                  src={portfolioData.personalInfo.avatar}
+                  alt={portfolioData.personalInfo.name}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <span className="flex items-center">
                 <span>{portfolioData.personalInfo.shortName}</span>
@@ -185,8 +188,12 @@ export const Navbar: React.FC = () => {
             {/* Modal Header */}
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-                  <Terminal className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-xl overflow-hidden ring-2 ring-blue-500/30 shadow-md shadow-blue-500/20 shrink-0">
+                  <img
+                    src={portfolioData.personalInfo.avatar}
+                    alt={portfolioData.personalInfo.name}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">
